@@ -15,15 +15,40 @@ const images = [
 
 
 const listEl = document.querySelector('.gallery');
+
+const imagesEl = images
+  .map(({ url, alt }) => {
+    `<li><img src=${url} alt=${alt}></li>`;
+  })
+  .join('');
+
+listEl.insertAdjacentHTML('afterbegin', imagesEl)
+
 console.log(listEl);
 
 
-const imagesEl = image.map(image =>
-  {<li><img src='${image.url}' alt='${image.alt}'></li>}
-).join('')
+// const listEl = document.querySelector('.gallery');
+// const li = '<li> ghgh </li>'
+
+// listEl.insertAdjacentHTML('afterbegin', li);
 
 
-listEl.insertAdjacentHTML('afterbegin', 'imagesEl')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

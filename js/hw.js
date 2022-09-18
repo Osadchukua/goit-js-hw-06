@@ -258,37 +258,58 @@
 
 
 
-const images = [
-  {
-    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'White and Black Long Fur Cat',
-  },
-  {
-    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
-  },
-  {
-    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Group of Horses Running',
-  },
-];
+// const images = [
+//   {
+//     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//     alt: 'White and Black Long Fur Cat',
+//   },
+//   {
+//     url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//     alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+//   },
+//   {
+//     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//     alt: 'Group of Horses Running',
+//   },
+// ];
 
 
-// const image = document.querySelector(".image");
+// // const image = document.querySelector(".image");
 
-// console.log(image.attributes); // NamedNodeMap {0: class, 1: src, 2: alt, length: 3}
+// // console.log(image.attributes); // NamedNodeMap {0: class, 1: src, 2: alt, length: 3}
 
-// console.log(image.hasAttribute("src")); // true
+// // console.log(image.hasAttribute("src")); // true
 
-// console.log(image.getAttribute("alt")); // "Lake and clouds"
+// // console.log(image.getAttribute("alt")); // "Lake and clouds"
 
-// image.setAttribute("alt", "Amazing nature");
+// // image.setAttribute("alt", "Amazing nature");
 
-// console.log(image.getAttribute("alt")); // Amazing nature
+// // console.log(image.getAttribute("alt")); // Amazing nature
 
 
-const image2 = document.createElement('img')
-image2.setAttribute(images, url);
-// console.log(image2);
+// const image2 = document.createElement('img')
+// image2.setAttribute(images, url);
+// // console.log(image2);
 
-// image2.hasAttribute(url);
+// // image2.hasAttribute(url);
+
+
+
+
+const addListenerBtn = document.querySelector('[data-action="add"]');
+const removeListenerBtn = document.querySelector('[data-action="remove"]');
+const btn = document.querySelector('#btn');
+
+const handleClick = () => {
+  console.log('click event listener callback');
+};
+
+addListenerBtn.addEventListener('click', () => {
+  btn.addEventListener('click', handleClick);
+  console.log('click event listener was added to btn');
+});
+
+removeListenerBtn.addEventListener('click', () => {
+  btn.removeEventListener('click', handleClick);
+  console.log('click event listener was removed from btn');
+});
