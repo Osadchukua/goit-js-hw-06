@@ -17,13 +17,15 @@ const listEl = document.querySelector('.gallery');
 
 const imagesEl = images
   .map(({ url, alt }) => {
-    `<li><img src="${url}" alt="${alt}"></li>`;
+
+    return `<li><img class="img" src="${url}" alt="${alt}"></li>`;
   })
   .join('');
 
+
 listEl.insertAdjacentHTML('afterbegin', imagesEl);
 
-console.log(imagesEl);
+console.dir(imagesEl);
 
 // const listEl = document.querySelector('.gallery');
 // const li = '<li> ghgh </li>'

@@ -24,7 +24,11 @@ button {
 }
 
 .gallery {
-  margin: 24px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  justify-items: center
 }
 
 .invalid {
@@ -32,7 +36,11 @@ button {
 }
 
 
+.img {
 
+  max-width: 250px;
+  list-style-type: none;
+}
 
 
 

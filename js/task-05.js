@@ -18,6 +18,13 @@ function onInputChange(event) {
 // function onInputChange(event) {
 //   // console.log(event.currentTarget.value);
 //   output.textContent = event.currentTarget.value;
+//
+//
+//
+//
+//
+//
+//
+//
+// event.preventDefault() - скасовує пересилання з посилання відміняє дефолтну поведінку по замовчуванню
 
-//   // event.preventDefault() - скасовує пересилання з посилання відміняє дефолтну поведінку по замовчуванню
-// }
