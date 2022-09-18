@@ -13,46 +13,22 @@ const images = [
   },
 ];
 
-
 const listEl = document.querySelector('.gallery');
 
 const imagesEl = images
   .map(({ url, alt }) => {
-    `<li><img src=${url} alt=${alt}></li>`;
+    `<li><img src="${url}" alt="${alt}"></li>`;
   })
   .join('');
 
-listEl.insertAdjacentHTML('afterbegin', imagesEl)
+listEl.insertAdjacentHTML('afterbegin', imagesEl);
 
-console.log(listEl);
-
+console.log(imagesEl);
 
 // const listEl = document.querySelector('.gallery');
 // const li = '<li> ghgh </li>'
 
 // listEl.insertAdjacentHTML('afterbegin', li);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const liEl = images.map(image => {
 //   <li class="list-item">
@@ -63,9 +39,6 @@ console.log(listEl);
 // listEl.insertAdjacentHTML('afterbegin', liEl);
 
 // gnfg
-
-
-
 
 // const listEl = document.querySelector('.gallery');
 // // console.log(listEl);
