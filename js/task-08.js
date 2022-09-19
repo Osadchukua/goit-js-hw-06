@@ -8,15 +8,13 @@ function onSubmit(evt) {
   const data = {
     email: email.value,
     password: password.value,
-    // date: new Date(),
   };
   console.log(data);
-  // alert('Thenk you')
 
   if (email.value === '' || password.value === '') {
     return alert('Всі поля повинні бути заповнені!');
   }
 
-   console.log(`Email: ${email.value}, Password: ${password.value}`);
-   evt.currentTarget.reset();
+  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  evt.currentTarget.reset();
 }

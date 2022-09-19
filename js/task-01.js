@@ -14,7 +14,3 @@ console.log('Elements:', ul2);
 console.log('Category:', titles[2].textContent);
 const ul3 = ulOll[1].children.length;
 console.log('Elements:', ul3);
-
-
-
-
