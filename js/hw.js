@@ -243,7 +243,7 @@
 // const markup = newTechnologies
 //   .map(
 //     technology => `
-//         <li 
+//         <li
 //         class="list-item new">
 //         ${technology}
 //         </li>
@@ -296,20 +296,38 @@
 
 
 
-const addListenerBtn = document.querySelector('[data-action="add"]');
-const removeListenerBtn = document.querySelector('[data-action="remove"]');
-const btn = document.querySelector('#btn');
+// const addListenerBtn = document.querySelector('[data-action="add"]');
+// const removeListenerBtn = document.querySelector('[data-action="remove"]');
+// const btn = document.querySelector('#btn');
 
-const handleClick = () => {
-  console.log('click event listener callback');
-};
+// const handleClick = () => {
+//   console.log('click event listener callback');
+// };
 
-addListenerBtn.addEventListener('click', () => {
-  btn.addEventListener('click', handleClick);
-  console.log('click event listener was added to btn');
-});
+// addListenerBtn.addEventListener('click', () => {
+//   btn.addEventListener('click', handleClick);
+//   console.log('click event listener was added to btn');
+// });
 
-removeListenerBtn.addEventListener('click', () => {
-  btn.removeEventListener('click', handleClick);
-  console.log('click event listener was removed from btn');
-});
+// removeListenerBtn.addEventListener('click', () => {
+//   btn.removeEventListener('click', handleClick);
+//   console.log('click event listener was removed from btn');
+// });
+
+
+const select = document.querySelector('.pizza-select');
+const textOutput = document.querySelector('.text-output');
+const valueOutput = document.querySelector('.value-output');
+
+setOutput();
+
+select.addEventListener('change', setOutput);
+
+function setOutput() {
+  const selectedOptionValue = select.value;
+  const selectedOptionIndex = select.selectedIndex;
+  const selectedOptionText = select.options[selectedOptionIndex].text;
+
+  textOutput.textContent = selectedOptionText;
+  valueOutput.textContent = selectedOptionValue;
+}
