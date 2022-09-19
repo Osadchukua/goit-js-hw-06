@@ -12,4 +12,11 @@ function onSubmit(evt) {
   };
   console.log(data);
   // alert('Thenk you')
+
+  if (email.value === '' || password.value === '') {
+    return alert('Всі поля повинні бути заповнені!');
+  }
+
+   console.log(`Email: ${email.value}, Password: ${password.value}`);
+   evt.currentTarget.reset();
 }
